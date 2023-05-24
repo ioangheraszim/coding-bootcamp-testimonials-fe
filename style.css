@@ -27,11 +27,19 @@ body {
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
-  border: 1px solid greenyellow;
   position: absolute;
 }
-
-img {
+.container .card-element {
   position: relative;
-  width: 80%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 85%;
+  margin-top: 2.2rem;
+  bottom: 50%;
+  left: 8%;
+}
+.container .card-element img {
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
