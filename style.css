@@ -12,12 +12,12 @@ body {
   align-items: center;
   background-color: #fff;
   min-height: 100vh;
+  font-family: "Inter", sans-serif;
 }
 
 .container {
   max-width: 375px;
   margin: 0 auto;
-  border: 1px solid green;
   position: relative;
 }
 .container .background-card {
@@ -26,20 +26,74 @@ body {
   background-image: url("./images/pattern-bg.svg"); /* The image used */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
+  background-size: contain; /* Resize the background image to cover the entire container */
   position: absolute;
 }
 .container .card-element {
+  position: relative;
+}
+.container .card-element .image-container {
   position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  width: 85%;
+  width: 80%;
   margin-top: 2.2rem;
   bottom: 50%;
   left: 8%;
 }
-.container .card-element img {
+.container .card-element .button-container {
+  position: absolute;
+  top: 95%;
+  left: 40%;
+  border-radius: 50%;
+}
+.container .card-element .button-container button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #fff;
+  margin: 0;
+  cursor: pointer;
+}
+.container .card-element .button-container button:hover {
+  background-color: #333;
+}
+.container .card-element .button-container .previous-button {
+  border-radius: 50% 0 0 50%;
+}
+.container .card-element .button-container .next-button {
+  border-radius: 0% 50% 50% 0%;
+}
+.container .text-container {
+  position: relative;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 4rem;
+  font-weight: 300;
+  color: hsl(240, 38%, 20%);
+}
+.container .text-container .quotes-container {
+  position: absolute;
+  top: 0%;
+  left: 40%;
+}
+.container .text-container .quotes-container .the-quote {
+  width: 50%;
+}
+.container .text-container .comment {
+  color: hsl(240, 38%, 20%);
+  font-weight: 300;
+}
+.container .text-container .name {
+  margin-top: 1rem;
+  font-weight: 700;
+  color: hsl(240, 38%, 20%);
+}
+.container .text-container .profession {
+  font-weight: 500;
+  color: hsl(240, 18%, 77%);
+}
+.container img {
   width: 100%;
 }/*# sourceMappingURL=style.css.map */

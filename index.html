@@ -8,25 +8,40 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <!-- Style Sheet -->
   <link rel="stylesheet" href="style.css">  
+  <!-- Font Style -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;500;700&display=swap" rel="stylesheet">
+
   <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>  
 </head>
 <body>
   <main class="container">
     <div class="background-card">      
     </div>
-    <div class="slide">
-      <div class="card-element">
-        <img src="./images/image-john.jpg" alt="">   
-        <button><img src="/images/icon-prev.svg" alt="previous icon"></button> 
-        <button><img src="/images/icon-next.svg" alt="next icon"></button>  
-      </div>     
-      <img class="background-img" src="./images/pattern-quotes.svg" alt="background-image">
-      <p>“ If you want to lay the best foundation possible I’d recommend taking this course. 
-        The depth the instructors go into is incredible. I now feel so confident about 
-        starting up as a professional developer. ”
-      </p>
-      <p>John Tarkpor</p>
-      <p>Junior Front-end Developer</p>   
+    <div class="card-element">
+      <div class="image-container">
+        <img src="./images/image-john.jpg" alt=""> 
+      </div>         
+      <div class="button-container">
+        <button  class="previous-button"><img src="/images/icon-prev.svg" alt="previous icon"></button> 
+        <button  class="next-button"><img src="/images/icon-next.svg"  alt="next icon"></button>  
+      </div>      
+    </div>
+    <div class="text-container">
+      <div class="quotes-container">
+        <img class= "the-quote" src="./images/pattern-quotes.svg" alt="quotes image">
+      </div>
+      <div class="quote-container">
+        <p class="comment">“ If you want to lay the best foundation possible I’d recommend taking this course. 
+          The depth the instructors go into is incredible. I now feel so confident about 
+          starting up as a professional developer. ”
+        </p>
+        <p class="name">John Tarkpor</p>
+        <p class="profession">Junior Front-end Developer</p>  
+      </div>
+       
     </div>   
     <!-- <div class="slide-2">      
       <p>“ If you want to lay the best foundation possible I’d recommend taking this course. 
