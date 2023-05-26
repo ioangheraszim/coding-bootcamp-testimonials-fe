@@ -21,212 +21,253 @@ body {
     font-family: "Inter", sans-serif;
 }
 
+
 .container {
     max-width: 375px;
-    margin: 0 auto;    
-    position: relative;
 
-    .background-card {
-        width: 375px;
-        height: 375px;
-        background-image: url("./images/pattern-bg.svg"); /* The image used */ 
-        background-position: center; /* Center the image */
-        background-repeat: no-repeat; /* Do not repeat the image */
-        background-size: contain; /* Resize the background image to cover the entire container */
-        position: absolute;
-    }
-
-    .card-element {
-        position: relative;
-
-        .image-container { 
-            position: relative;
-            display: flex;
-            align-items: center;
-            flex-direction: column;
-            justify-content: center;
-            width: 80%;
-            margin-top: 2.2rem;
-            bottom: 50%;
-            left: 10%;
-            animation: fade-in-image 2s ease-in forwards;
-            box-shadow: 3px 10px 36px -13px rgba(0,0,0,0.75);
-        }
-
-        @keyframes fade-in-image {
-            0% {
-                opacity: 0;
-                transform: translateX(35%)
-            } 
-            100% {
-                opacity: 1;
-                transform: translateX(0)
-            }
-        }
-
-        .button-container {
-            display: flex;
-            position: absolute;
-            top: 95%;
-            left: 40%;
-            border-radius: 50%;
-            box-shadow: 3px 10px 36px -13px rgba(0,0,0,0.75);
-           
-            button {
-                border: none; 
-                outline: none;
-                padding: .8rem 1rem;                
-                background-color: #fff;
-                margin: 0;
-                cursor: pointer;               
-            }
-
-            button:hover {
-                background-color: #333;
-            }
-
-            .previous-button {
-                border-radius: 40% 0 0 40%;
-            }
-
-            .next-button {
-                border-radius: 0% 40% 40% 0%;
-            }
-        }       
-    }
-    
-    .text-container {
-        position: relative;
-        text-align: center;        
-        padding: 1.3rem;
-        margin-top: 4rem;
-        font-weight: 300;
-        color: $dark-blue;
-
-        .quotes-image {
-            position: absolute;
-            top:0%;
-            left: 34%;
-
-            .the-quote {
-                width: 50%;
-            }
-
-        }
-
-        .comment {
-            font-size: 1.2rem;
-            color: $dark-blue;
-            font-weight: 300;  
-            animation: fade-in-anim 2s ease-in forwards;         
-        }
-
-        @keyframes fade-in-anim {
-            0% {
-                opacity: 0;
-                transform: translateX(-35%)
-            } 
-            100% {
-                opacity: 1;
-                transform: translateX(0)
-            }
-        }
-
-        .name {
-            margin-top: 1rem;
-            font-weight: 700;
-            color: $dark-blue;
-            animation: fade-in-comment 2s ease-in forwards;
-        }
-
-        .profession {
-            font-weight: 500;
-            color: $grayish-blue;
-            animation: fade-in-comment 2s ease-in forwards;
-        }
-    }
-
-        img {
-            width: 100%;
-        }
-    
-}
-
-@media (min-width: 1440px) {
-    .container {
-        max-width: 1440px;
+    .content {
+        border: 1px solid yellow;
         display: flex;
-        justify-content: end;
         align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        position: relative;
         
         .background-card {
-            width: 530px;
-            height: 530px;            
+            width: 375px;
+            height: 375px;
+            background-image: url("./images/pattern-bg.svg"); /* The image used */ 
+            background-position: center; /* Center the image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+            background-size: contain; /* Resize the background image to cover the entire container */
+            
+            border: 1px solid red;
         }
 
         .card-element {
-            width: 50%;
+            position: absolute;
+    
+            .image-container {
+                position: relative;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                justify-content: center;
+                width: 78%;
+                top: -7.4rem;
+                left: 12%;                
+                box-shadow: 3px 10px 36px -13px rgba(0,0,0,0.75);
+
+                .person {
+                    border-radius: 10px 10px 10px 10px;
+                    width: 100%;
+                }
+            }
 
             .button-container {
                 display: flex;
                 position: absolute;
-                top: 95%;
-                left: 20%;
+                top: 53%;
+                left: 40%;
                 border-radius: 50%;
-            }
-
-            .image-container {                               
-                width: 70%;                
-                bottom: 50%;
-                left: 10%;                
-            }
-        }
-
-        .order-text {
-            width: 50%;
-
-        }
-
-        .text-container {            
-            order: 1;
-            width: fit-content;            
-            border: 1px solid green;
-
-            .quote-container {
-                text-align: left;
-
-                .information {
-                    display: flex;
-                    justify-content: start;
-                    align-items: center;
-                    margin: 2rem 0;
-                    
-                    .name {
-                        margin: 1rem;
-                        margin-right: 1rem;
-                    }
-                }
-            }
-
-            .comment {
-                font-size: 32px;
-            }
-
-            .quotes-image {
-                position: absolute;
-                top:-13%;
-                left: 23%;
-    
-                .the-quote {
-                    width: 90%;
+                box-shadow: 3px 10px 36px -13px rgba(0,0,0,0.75);
+                
+                button {
+                    border: none; 
+                    outline: none;
+                    padding: .8rem 1rem;                
+                    background-color: #fff;
+                    margin: 0;
+                    cursor: pointer;               
                 }
     
-            }
+                button:hover {
+                    background-color: #333;
+                }
+    
+                .previous-button {
+                    border-radius: 40% 0 0 40%;
+                }
+    
+                .next-button {
+                    border-radius: 0% 40% 40% 0%;
+                }
+            }      
+        
         }
-
-        .card-element {
-            order: 2;
-        }       
+        
+        
 
     }
 }
+
+// .container {
+//     max-width: 375px;
+//     margin: 0 auto;    
+//     position: relative;
+
+
+
+
+
+//         @keyframes fade-in-image {
+//             0% {
+//                 opacity: 0;
+//                 transform: translateX(35%)
+//             } 
+//             100% {
+//                 opacity: 1;
+//                 transform: translateX(0)
+//             }
+//         }
+
+//         
+    
+//     .text-container {
+//         position: relative;
+//         text-align: center;        
+//         padding: 1.3rem;
+//         margin-top: 4rem;
+//         font-weight: 300;
+//         color: $dark-blue;
+
+//         .quotes-image {
+//             position: absolute;
+//             top:0%;
+//             left: 34%;
+
+//             .the-quote {
+//                 width: 50%;
+//             }
+
+//         }
+
+//         .comment {
+//             font-size: 1.2rem;
+//             color: $dark-blue;
+//             font-weight: 300;  
+//             animation: fade-in-anim 2s ease-in forwards;         
+//         }
+
+//         @keyframes fade-in-anim {
+//             0% {
+//                 opacity: 0;
+//                 transform: translateX(-35%)
+//             } 
+//             100% {
+//                 opacity: 1;
+//                 transform: translateX(0)
+//             }
+//         }
+
+//         .name {
+//             margin-top: 1rem;
+//             font-weight: 700;
+//             color: $dark-blue;
+//             animation: fade-in-comment 2s ease-in forwards;
+//         }
+
+//         .profession {
+//             font-weight: 500;
+//             color: $grayish-blue;
+//             animation: fade-in-comment 2s ease-in forwards;
+//         }
+//     }
+
+
+    
+// }
+
+@media (min-width: 1440px){
+    .container {
+       max-width: 1440px;
+       border: 1px solid red;
+
+        .content {
+            border: 1px solid yellow;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+        }
+    }
+}
+// @media (min-width: 1440px) {
+//     .container {
+//         max-width: 1440px;
+//         display: flex;
+//         justify-content: end;
+//         align-items: center;
+        
+//         .background-card {
+//             width: 530px;
+//             height: 530px;            
+//         }
+
+//         .card-element {
+//             width: 50%;
+
+//             .button-container {
+//                 display: flex;
+//                 position: absolute;
+//                 top: 95%;
+//                 left: 20%;
+//                 border-radius: 50%;
+//             }
+
+//             .image-container {                               
+//                 width: 70%;                
+//                 bottom: 50%;
+//                 left: 10%;                
+//             }
+//         }
+
+//         .order-text {
+//             width: 50%;
+
+//         }
+
+//         .text-container {            
+//             order: 1;
+//             width: fit-content;            
+//             border: 1px solid green;
+
+//             .quote-container {
+//                 text-align: left;
+
+//                 .information {
+//                     display: flex;
+//                     justify-content: start;
+//                     align-items: center;
+//                     margin: 2rem 0;
+                    
+//                     .name {
+//                         margin: 1rem;
+//                         margin-right: 1rem;
+//                     }
+//                 }
+//             }
+
+//             .comment {
+//                 font-size: 32px;
+//             }
+
+//             .quotes-image {
+//                 position: absolute;
+//                 top:-13%;
+//                 left: 23%;
+    
+//                 .the-quote {
+//                     width: 90%;
+//                 }
+    
+//             }
+//         }
+
+//         .card-element {
+//             order: 2;
+//         }       
+
+//     }
+// }

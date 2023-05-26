@@ -17,53 +17,51 @@ body {
 
 .container {
   max-width: 375px;
-  margin: 0 auto;
+}
+.container .content {
+  border: 1px solid yellow;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
   position: relative;
 }
-.container .background-card {
+.container .content .background-card {
   width: 375px;
   height: 375px;
   background-image: url("./images/pattern-bg.svg"); /* The image used */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: contain; /* Resize the background image to cover the entire container */
+  border: 1px solid red;
+}
+.container .content .card-element {
   position: absolute;
 }
-.container .card-element {
-  position: relative;
-}
-.container .card-element .image-container {
+.container .content .card-element .image-container {
   position: relative;
   display: flex;
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  width: 80%;
-  margin-top: 2.2rem;
-  bottom: 50%;
-  left: 10%;
-  animation: fade-in-image 2s ease-in forwards;
+  width: 78%;
+  top: -7.4rem;
+  left: 12%;
   box-shadow: 3px 10px 36px -13px rgba(0, 0, 0, 0.75);
 }
-@keyframes fade-in-image {
-  0% {
-    opacity: 0;
-    transform: translateX(35%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
+.container .content .card-element .image-container .person {
+  border-radius: 10px 10px 10px 10px;
+  width: 100%;
 }
-.container .card-element .button-container {
+.container .content .card-element .button-container {
   display: flex;
   position: absolute;
-  top: 95%;
+  top: 53%;
   left: 40%;
   border-radius: 50%;
   box-shadow: 3px 10px 36px -13px rgba(0, 0, 0, 0.75);
 }
-.container .card-element .button-container button {
+.container .content .card-element .button-container button {
   border: none;
   outline: none;
   padding: 0.8rem 1rem;
@@ -71,122 +69,26 @@ body {
   margin: 0;
   cursor: pointer;
 }
-.container .card-element .button-container button:hover {
+.container .content .card-element .button-container button:hover {
   background-color: #333;
 }
-.container .card-element .button-container .previous-button {
+.container .content .card-element .button-container .previous-button {
   border-radius: 40% 0 0 40%;
 }
-.container .card-element .button-container .next-button {
+.container .content .card-element .button-container .next-button {
   border-radius: 0% 40% 40% 0%;
-}
-.container .text-container {
-  position: relative;
-  text-align: center;
-  padding: 1.3rem;
-  margin-top: 4rem;
-  font-weight: 300;
-  color: hsl(240, 38%, 20%);
-}
-.container .text-container .quotes-image {
-  position: absolute;
-  top: 0%;
-  left: 34%;
-}
-.container .text-container .quotes-image .the-quote {
-  width: 50%;
-}
-.container .text-container .comment {
-  font-size: 1.2rem;
-  color: hsl(240, 38%, 20%);
-  font-weight: 300;
-  animation: fade-in-anim 2s ease-in forwards;
-}
-@keyframes fade-in-anim {
-  0% {
-    opacity: 0;
-    transform: translateX(-35%);
-  }
-  100% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-.container .text-container .name {
-  margin-top: 1rem;
-  font-weight: 700;
-  color: hsl(240, 38%, 20%);
-  animation: fade-in-comment 2s ease-in forwards;
-}
-.container .text-container .profession {
-  font-weight: 500;
-  color: hsl(240, 18%, 77%);
-  animation: fade-in-comment 2s ease-in forwards;
-}
-.container img {
-  width: 100%;
 }
 
 @media (min-width: 1440px) {
   .container {
     max-width: 1440px;
+    border: 1px solid red;
+  }
+  .container .content {
+    border: 1px solid yellow;
     display: flex;
-    justify-content: end;
     align-items: center;
-  }
-  .container .background-card {
-    width: 530px;
-    height: 530px;
-  }
-  .container .card-element {
-    width: 50%;
-  }
-  .container .card-element .button-container {
-    display: flex;
-    position: absolute;
-    top: 95%;
-    left: 20%;
-    border-radius: 50%;
-  }
-  .container .card-element .image-container {
-    width: 70%;
-    bottom: 50%;
-    left: 10%;
-  }
-  .container .order-text {
-    width: 50%;
-  }
-  .container .text-container {
-    order: 1;
-    width: -moz-fit-content;
-    width: fit-content;
-    border: 1px solid green;
-  }
-  .container .text-container .quote-container {
-    text-align: left;
-  }
-  .container .text-container .quote-container .information {
-    display: flex;
-    justify-content: start;
-    align-items: center;
-    margin: 2rem 0;
-  }
-  .container .text-container .quote-container .information .name {
-    margin: 1rem;
-    margin-right: 1rem;
-  }
-  .container .text-container .comment {
-    font-size: 32px;
-  }
-  .container .text-container .quotes-image {
-    position: absolute;
-    top: -13%;
-    left: 23%;
-  }
-  .container .text-container .quotes-image .the-quote {
-    width: 90%;
-  }
-  .container .card-element {
-    order: 2;
+    justify-content: center;
+    position: relative;
   }
 }/*# sourceMappingURL=style.css.map */
