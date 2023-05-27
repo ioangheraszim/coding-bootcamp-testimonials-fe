@@ -17,10 +17,6 @@ body {
 
 .container {
   max-width: 375px;
-  border: 1px solid red;
-}
-.container .content {
-  border: 1px solid yellow;
 }
 .container .content .top-content {
   display: flex;
@@ -49,10 +45,9 @@ body {
   width: 78%;
   top: 0.16rem;
   left: 12%;
-  box-shadow: 3px 10px 36px -13px rgba(0, 0, 0, 0.75);
-  animation: fade-in-image 2s ease-in forwards;
 }
 .container .content .top-content .card-element .image-container .person {
+  animation: fade-in-image 2s ease-in forwards;
   border-radius: 10px 10px 10px 10px;
   width: 100%;
 }
@@ -113,6 +108,17 @@ body {
   font-weight: 300;
   animation: fade-in-anim 2s ease-in forwards;
 }
+.container .content .text-container .name {
+  margin-top: 1rem;
+  font-weight: 700;
+  color: hsl(240, 38%, 20%);
+  animation: fade-in-anim 2s ease-in forwards;
+}
+.container .content .text-container .profession {
+  font-weight: 500;
+  color: hsl(240, 18%, 77%);
+  animation: fade-in-anim 2s ease-in forwards;
+}
 @keyframes fade-in-anim {
   0% {
     opacity: 0;
@@ -123,38 +129,24 @@ body {
     transform: translateX(0);
   }
 }
-.container .content .text-container .name {
-  margin-top: 1rem;
-  font-weight: 700;
-  color: hsl(240, 38%, 20%);
-  animation: fade-in-comment 2s ease-in forwards;
-}
-.container .content .text-container .profession {
-  font-weight: 500;
-  color: hsl(240, 18%, 77%);
-  animation: fade-in-comment 2s ease-in forwards;
-}
 .container .btm-corner-img {
   width: 100%;
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 720px) {
   .container {
-    max-width: 1440px;
-    border: 1px solid red;
+    max-width: 1250px;
+    /* Bottom corner image */
   }
   .container .btm-corner-img {
     position: absolute;
     width: 530px;
   }
   .container .content {
-    max-width: 1300px;
-    border: 1px solid yellow;
     padding: 1rem;
     display: flex;
     justify-content: end;
     align-items: center;
-    flex-direction: row;
   }
   .container .content .top-content {
     order: 2;
@@ -168,10 +160,29 @@ body {
     position: absolute;
     top: 95%;
     left: 20%;
-    border-radius: 50%;
+    border-radius: 80%;
+  }
+  .container .content .top-content .card-element .button-container .previous-button {
+    border-radius: 2rem 0 0 2rem;
+  }
+  .container .content .top-content .card-element .button-container .next-button {
+    padding-right: 1rem;
+    border-radius: 0 2rem 2rem 0;
   }
   .container .content .order-text {
-    border: 1px solid red;
     order: 1;
+  }
+  .container .content .order-text .comment {
+    text-align: left;
+    font-size: 2rem;
+  }
+  .container .content .order-text .information {
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    margin-top: 2rem;
+  }
+  .container .content .order-text .information .name {
+    margin: 0 1rem 0 0;
   }
 }/*# sourceMappingURL=style.css.map */

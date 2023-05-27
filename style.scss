@@ -24,11 +24,9 @@ body {
 
 .container {
     max-width: 375px;
-    border: 1px solid red;
 
      
     .content {
-        border: 1px solid yellow; 
         
         .top-content {            
             display: flex;
@@ -58,9 +56,9 @@ body {
                     width: 78%;
                     top: 0.16rem;
                     left: 12%;                
-                    box-shadow: 3px 10px 36px -13px rgba(0,0,0,0.75);
-                    animation: fade-in-image 2s ease-in forwards;         
+
                     .person {
+                        animation: fade-in-image 2s ease-in forwards;
                         border-radius: 10px 10px 10px 10px;
                         width: 100%;
                     }
@@ -74,6 +72,10 @@ body {
                             opacity: 1;
                             transform: translateX(0)
                         }
+                    }
+
+                    .the-name {
+
                     }
                 }
     
@@ -134,8 +136,21 @@ body {
                 color: $dark-blue;
                 font-weight: 300;  
                 animation: fade-in-anim 2s ease-in forwards;         
+            }   
+    
+            .name {
+                margin-top: 1rem;
+                font-weight: 700;
+                color: $dark-blue;
+                animation: fade-in-anim 2s ease-in forwards;
             }
     
+            .profession {
+                font-weight: 500;
+                color: $grayish-blue;
+                animation: fade-in-anim 2s ease-in forwards;
+            }
+
             @keyframes fade-in-anim {
                 0% {
                     opacity: 0;
@@ -146,19 +161,6 @@ body {
                     transform: translateX(0)
                 }
             }
-    
-            .name {
-                margin-top: 1rem;
-                font-weight: 700;
-                color: $dark-blue;
-                animation: fade-in-comment 2s ease-in forwards;
-            }
-    
-            .profession {
-                font-weight: 500;
-                color: $grayish-blue;
-                animation: fade-in-comment 2s ease-in forwards;
-            }
         }
 
     }
@@ -168,129 +170,71 @@ body {
     }
 }
 
-@media (min-width: 1440px){
+@media (min-width: 720px){
     .container {
-       max-width: 1440px;
-       border: 1px solid red;
+       max-width: 1250px;
 
+        /* Bottom corner image */
         .btm-corner-img {
             position: absolute;
             width: 530px;           
         }
 
         .content {
-            max-width: 1300px;
-            border: 1px solid yellow;
             padding: 1rem;
             display: flex;
             justify-content: end;
             align-items: center;
-            flex-direction: row;
+
             .top-content {
                 order: 2;
+
                 .background-card {
                     width: 530px;
                     height: 530px;                    
                 }
     
                 .card-element {
-                
                     .button-container {
                         display: flex;
                         position: absolute;
                         top: 95%;
                         left: 20%;
-                        border-radius: 50%;
+                        border-radius: 80%;
+
+                        .previous-button {
+                            border-radius: 2rem 0 0 2rem;
+                        }
+
+                        .next-button {
+                            padding-right: 1rem;
+                            border-radius: 0 2rem 2rem 0;
+                        }
                     }                
                 }
             }
            
 
             .order-text {
-                border: 1px solid red;
-                order: 1;
-                .text-container {
+                order: 1;                
+                
+                .comment {
+                    text-align: left;
+                    font-size: 2rem;
+                }
 
+                .information {
+                    display: flex;
+                    justify-content: start;
+                    align-items: center;
+                    margin-top: 2rem;
+
+                    .name {
+                        margin: 0 1rem 0 0;
+                        
+                    }
                 }
             }
         }
     }
 }
-// @media (min-width: 1440px) {
-//     .container {
-//         max-width: 1440px;
-//         display: flex;
-//         justify-content: end;
-//         align-items: center;
-        
-//         .background-card {
-//             width: 530px;
-//             height: 530px;            
-//         }
-
-//         .card-element {
-//             width: 50%;
-
-//             .button-container {
-//                 display: flex;
-//                 position: absolute;
-//                 top: 95%;
-//                 left: 20%;
-//                 border-radius: 50%;
-//             }
-
-//             .image-container {                               
-//                 width: 70%;                
-//                 bottom: 50%;
-//                 left: 10%;                
-//             }
-//         }
-
-//         .order-text {
-//             width: 50%;
-
-//         }
-
-//         .text-container {            
-//             order: 1;
-//             width: fit-content;            
-//             border: 1px solid green;
-
-//             .quote-container {
-//                 text-align: left;
-
-//                 .information {
-//                     display: flex;
-//                     justify-content: start;
-//                     align-items: center;
-//                     margin: 2rem 0;
-                    
-//                     .name {
-//                         margin: 1rem;
-//                         margin-right: 1rem;
-//                     }
-//                 }
-//             }
-
-//             .comment {
-//                 font-size: 32px;
-//             }
-
-//             .quotes-image {
-//                 position: absolute;
-//                 top:-13%;
-//                 left: 23%;
-    
-//                 .the-quote {
-//                     width: 90%;
-//                 }
-    
-//             }
-//         }
-
-//         .card-element {
-//             order: 2;
-//         }       
-
-//     }
-// }
