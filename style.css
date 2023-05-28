@@ -16,7 +16,7 @@ body {
 }
 
 .container {
-  max-width: 375px;
+  max-width: 23.438rem;
 }
 .container .content .top-content {
   display: flex;
@@ -26,8 +26,8 @@ body {
   position: relative;
 }
 .container .content .top-content .background-card {
-  width: 375px;
-  height: 375px;
+  width: 23.438rem;
+  height: 23.438rem;
   background-image: url("./images/pattern-bg.svg"); /* The image used */
   background-position: center; /* Center the image */
   background-repeat: no-repeat; /* Do not repeat the image */
@@ -48,7 +48,7 @@ body {
 }
 .container .content .top-content .card-element .image-container .person {
   animation: fade-in-image 2s ease-in forwards;
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 0.625rem 0.625rem 0.625rem 0.625rem;
   width: 100%;
 }
 @keyframes fade-in-image {
@@ -133,14 +133,14 @@ body {
   width: 100%;
 }
 
-@media (min-width: 720px) {
+@media (min-width: 45.563rem) {
   .container {
-    max-width: 1250px;
+    max-width: 90rem;
     /* Bottom corner image */
   }
   .container .btm-corner-img {
     position: absolute;
-    width: 530px;
+    width: 33.125rem;
   }
   .container .content {
     padding: 1rem;
@@ -152,8 +152,8 @@ body {
     order: 2;
   }
   .container .content .top-content .background-card {
-    width: 530px;
-    height: 530px;
+    width: 33.125rem;
+    height: 33.125rem;
   }
   .container .content .top-content .card-element .button-container {
     display: flex;
