@@ -172,6 +172,14 @@ body {
   .container .content .order-text {
     order: 1;
   }
+  .container .content .order-text .quotes-image {
+    position: absolute;
+    top: -13%;
+    left: 17%;
+  }
+  .container .content .order-text .quotes-image .the-quote {
+    width: 90%;
+  }
   .container .content .order-text .comment {
     text-align: left;
     font-size: 2rem;

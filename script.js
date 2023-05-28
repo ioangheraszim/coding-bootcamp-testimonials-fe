@@ -4,7 +4,6 @@ const prevBtn = document.getElementById("prev-button")
 const nextBtn = document.getElementById("next-button")
 
 // Array that contains the text and image
-
 const infoArray = [{
         name: "John Tarkpor",
         job: "Junior Front-End Developer",
@@ -18,18 +17,26 @@ const infoArray = [{
     }
 ]
 
+// Variable to keep track of the current item
 let currentIndex = 0;
+
+// Variable to store the length of the array
 const totalItems = infoArray.length;
 
+// Function to animate elements 
 function animateElement(elementId, animationClass) {
     const element = document.getElementById(elementId);
-    element.classList.remove(animationClass); // Remove the class to reset the animation
+
+    // Remove the class to reset the animation
+    element.classList.remove(animationClass); 
     // Delay the addition of the class to allow the reset to take effect
     setTimeout(() => {
-      element.classList.add(animationClass); // Add the class to trigger the animation
+    // Add the class to trigger the animation
+      element.classList.add(animationClass); 
     }, 10);
 }
 
+// Function to update info and animation to be displayed based on the current item in the array
 function updateInfo(){
     const item = infoArray[currentIndex];
     document.getElementById('the-name').textContent = item.name;
@@ -43,11 +50,15 @@ function updateInfo(){
     animateElement('the-image', 'person'); // Animate the element with ID 'the-image'
 }
 
+
+// Previous button functionality
 prevBtn.addEventListener("click", () => {
     currentIndex = (currentIndex - 1 + totalItems) % totalItems;
     updateInfo();
 });
 
+
+// Next button functionality
 nextBtn.addEventListener("click", () => {
     currentIndex = (currentIndex + 1) % totalItems;
     updateInfo();

@@ -74,9 +74,6 @@ body {
                         }
                     }
 
-                    .the-name {
-
-                    }
                 }
     
                 .button-container {
@@ -217,7 +214,15 @@ body {
 
             .order-text {
                 order: 1;                
-                
+                .quotes-image {
+                    position: absolute;
+                    top: -13%;
+                    left: 17%;
+        
+                    .the-quote {
+                        width: 90%;
+                    }    
+            }
                 .comment {
                     text-align: left;
                     font-size: 2rem;
