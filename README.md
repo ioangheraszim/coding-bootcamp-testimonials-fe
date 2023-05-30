@@ -29,12 +29,12 @@ Users should be able to:
 
 ![Mobile Screenshot](./screenshots/mobile-screenshot.png)
 
-![Mobile Screenshot](./screenshots/desktop-screenshot.png)
+![Desktop Screenshot](./screenshots/desktop-screenshot.png)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Add solution URL here](https://github.com/ioangheraszim/coding-bootcamp-testimonials-fe)
+- Live Site URL: [Add live site URL here](https://ioangheraszim.github.io/coding-bootcamp-testimonials-fe/)
 
 ## My process
 
